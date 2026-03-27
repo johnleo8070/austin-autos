@@ -34,6 +34,60 @@ export default function Home({ onViewDetails }: HomeProps) {
         }
       }
     );
+
+    // Sell Your Car Section Animations
+    gsap.from('.sell-content > *', {
+      scrollTrigger: {
+        trigger: '.sell-section',
+        start: 'top 70%',
+        toggleActions: 'play reverse play reverse'
+      },
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: 'power3.out'
+    });
+
+    gsap.from('.sell-image', {
+      scrollTrigger: {
+        trigger: '.sell-section',
+        start: 'top 70%',
+        toggleActions: 'play reverse play reverse'
+      },
+      scale: 0.8,
+      x: 50,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out'
+    });
+
+    // Why Choose Us Section Animations
+    gsap.from('.feature-header > *', {
+      scrollTrigger: {
+        trigger: '.feature-section',
+        start: 'top 80%',
+        toggleActions: 'play reverse play reverse'
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: 'power3.out'
+    });
+
+    gsap.from('.feature-card-item', {
+      scrollTrigger: {
+        trigger: '.feature-section',
+        start: 'top 70%',
+        toggleActions: 'play reverse play reverse'
+      },
+      y: 60,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'back.out(1.7)'
+    });
   }, { scope: container });
 
   return (
@@ -113,13 +167,13 @@ export default function Home({ onViewDetails }: HomeProps) {
       </section>
 
       {/* Sell Your Car Banner */}
-      <section className="py-20 bg-[#1C252E] text-white overflow-hidden relative">
+      <section className="py-20 bg-[#1C252E] text-white overflow-hidden relative sell-section">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
           <Car className="w-full h-full rotate-12 translate-x-1/4" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="sell-content">
               <h2 className="text-[#D0D6E0] font-black uppercase tracking-widest text-sm mb-3">Instant Appraisal</h2>
               <h3 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
                 Looking to Sell Your <span className="text-[#475C7A]">Current Vehicle?</span>
@@ -155,7 +209,7 @@ export default function Home({ onViewDetails }: HomeProps) {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
-            <div className="relative">
+            <div className="relative sell-image">
               <div className="aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white/5">
                 <img
                   src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto=format&fit=crop"
@@ -174,35 +228,43 @@ export default function Home({ onViewDetails }: HomeProps) {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-gray-50 feature-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16 feature-header">
             <h2 className="text-[#475C7A] font-black uppercase tracking-widest text-sm mb-3">Our Commitment</h2>
             <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Why Choose Austin Autos?</h3>
             <p className="text-gray-500 font-medium">We've built our reputation on four core pillars that ensure you get the best vehicle and the best experience.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <FeatureCard
-              icon={CheckCircle}
-              title="Quality Assurance"
-              description="Every vehicle undergoes a rigorous 150-point inspection and professional reconditioning."
-            />
-            <FeatureCard
-              icon={Users}
-              title="Expert Guidance"
-              description="Our team of experts will guide you through the entire process of finding your perfect vehicle."
-            />
-            <FeatureCard
-              icon={FileText}
-              title="Free History Reports"
-              description="Transparency is key. Get a detailed CARFAX or AutoCheck report for every vehicle in stock."
-            />
-            <FeatureCard
-              icon={RefreshCw}
-              title="Trade-In Accepted"
-              description="Get the maximum value for your current vehicle. Instant appraisal and hassle-free exchange."
-            />
+            <div className="feature-card-item">
+              <FeatureCard
+                icon={CheckCircle}
+                title="Quality Assurance"
+                description="Every vehicle undergoes a rigorous 150-point inspection and professional reconditioning."
+              />
+            </div>
+            <div className="feature-card-item">
+              <FeatureCard
+                icon={Users}
+                title="Expert Guidance"
+                description="Our team of experts will guide you through the entire process of finding your perfect vehicle."
+              />
+            </div>
+            <div className="feature-card-item">
+              <FeatureCard
+                icon={FileText}
+                title="Free History Reports"
+                description="Transparency is key. Get a detailed CARFAX or AutoCheck report for every vehicle in stock."
+              />
+            </div>
+            <div className="feature-card-item">
+              <FeatureCard
+                icon={RefreshCw}
+                title="Trade-In Accepted"
+                description="Get the maximum value for your current vehicle. Instant appraisal and hassle-free exchange."
+              />
+            </div>
           </div>
         </div>
       </section>

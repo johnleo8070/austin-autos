@@ -102,8 +102,13 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: 100, scale: 1.1, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, x: 0, scale: 1, filter: "blur(0px)" }}
+            transition={{
+              duration: 1.2,
+              ease: [0.22, 1, 0.36, 1], // Custom cubic-bezier for a "premium" deceleration
+              x: { type: "spring", stiffness: 50, damping: 20 }
+            }}
             viewport={{ once: false, amount: 0.1 }}
             className="relative"
           >
