@@ -18,7 +18,7 @@ export default function FilterBar({ onSearch, onFilterChange, onSortChange }: Fi
             type="text"
             placeholder="Search by Make, Model, or Year..."
             onChange={(e) => onSearch(e.target.value)}
-            className="w-full pl-12 pr-4 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#B22234] transition-all text-sm font-medium"
+            className="w-full pl-12 pr-4 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#475C7A] transition-all text-sm font-medium"
           />
         </div>
 
@@ -35,7 +35,7 @@ export default function FilterBar({ onSearch, onFilterChange, onSortChange }: Fi
           <div className="relative">
             <select
               onChange={(e) => onSortChange(e.target.value)}
-              className="w-full appearance-none pl-4 pr-10 py-4 bg-gray-900 text-white rounded-2xl text-sm font-bold cursor-pointer focus:ring-2 focus:ring-[#B22234] transition-all"
+              className="w-full appearance-none pl-4 pr-10 py-4 bg-gray-900 text-white rounded-2xl text-sm font-bold cursor-pointer focus:ring-2 focus:ring-[#475C7A] transition-all"
             >
               <option value="newest">Newest First</option>
               <option value="price-low">Price: Low to High</option>
@@ -55,7 +55,7 @@ function FilterSelect({ label, options, onChange }: { label: string, options: st
     <div className="relative">
       <select
         onChange={(e) => onChange(e.target.value)}
-        className="w-full appearance-none pl-4 pr-10 py-4 bg-gray-50 text-gray-700 rounded-2xl text-xs font-bold uppercase tracking-wider cursor-pointer focus:ring-2 focus:ring-[#B22234] transition-all border-none"
+        className="w-full appearance-none pl-4 pr-10 py-4 bg-gray-50 text-gray-700 rounded-2xl text-xs font-bold uppercase tracking-wider cursor-pointer focus:ring-2 focus:ring-[#475C7A] transition-all border-none"
       >
         <option value="">{label}</option>
         {options.map((opt) => (

@@ -27,31 +27,22 @@ export default function Navbar() {
     <nav
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-        scrolled 
-          ? 'bg-white/70 backdrop-blur-xl saturate-150 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] py-2 border-b border-white/20' 
+        scrolled
+          ? 'bg-white/70 backdrop-blur-xl saturate-150 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] py-2 border-b border-white/20'
           : 'bg-black/20 backdrop-blur-md py-4 border-b border-white/10'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="bg-[#B22234] p-2 rounded-lg group-hover:bg-[#C41E3A] transition-colors">
-              <Car className="w-6 h-6 text-white" />
-            </div>
-            <div className="flex flex-col">
-              <span className={cn(
-                "text-xl font-bold tracking-tight leading-none",
-                scrolled ? "text-[#1A1A1A]" : "text-white drop-shadow-md"
-              )}>
-                AUSTIN AUTOS LTD
-              </span>
-              <span className={cn(
-                "text-xs font-semibold tracking-[0.2em] uppercase",
-                scrolled ? "text-[#B22234]" : "text-[#D4AF37]"
-              )}>
-                Auto Sales
-              </span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Austin Autos Logo"
+              className={cn(
+                "w-auto transition-all duration-300 rounded-lg shadow-lg",
+                scrolled ? "h-12" : "h-16"
+              )}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -61,10 +52,10 @@ export default function Navbar() {
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  'text-sm font-medium transition-colors hover:text-[#B22234]',
+                  'text-sm font-medium transition-colors hover:text-[#475C7A]',
                   location.pathname === link.path
-                    ? 'text-[#B22234]'
-                    : scrolled ? 'text-[#1A1A1A]' : 'text-white'
+                    ? 'text-[#475C7A]'
+                    : scrolled ? 'text-[#1C252E]' : 'text-white'
                 )}
               >
                 {link.name}
@@ -72,7 +63,7 @@ export default function Navbar() {
             ))}
             <Link
               to="/inventory"
-              className="bg-[#B22234] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#C41E3A] transition-all transform hover:scale-105"
+              className="bg-[#475C7A] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#5C7495] transition-all transform hover:scale-105"
             >
               Browse Cars
             </Link>
@@ -84,7 +75,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className={cn(
                 'p-2 rounded-md transition-colors',
-                scrolled ? 'text-[#1A1A1A]' : 'text-white'
+                scrolled ? 'text-[#1C252E]' : 'text-white'
               )}
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -109,8 +100,8 @@ export default function Navbar() {
               className={cn(
                 'flex items-center space-x-3 px-3 py-3 rounded-lg text-base font-medium transition-colors',
                 location.pathname === link.path
-                  ? 'bg-red-50 text-[#B22234]'
-                  : 'text-gray-700 hover:bg-gray-50 hover:text-[#B22234]'
+                  ? 'bg-[#475C7A]/10 text-[#475C7A]'
+                  : 'text-gray-700 hover:bg-gray-50 hover:text-[#475C7A]'
               )}
             >
               <link.icon className="w-5 h-5" />
@@ -121,7 +112,7 @@ export default function Navbar() {
             <Link
               to="/inventory"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center bg-[#B22234] text-white py-3 rounded-lg font-bold shadow-lg shadow-red-200"
+              className="block w-full text-center bg-[#475C7A] text-white py-3 rounded-lg font-bold shadow-lg shadow-[#475C7A]/20"
             >
               Browse Inventory
             </Link>

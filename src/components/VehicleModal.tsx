@@ -57,7 +57,7 @@ export default function VehicleModal({ vehicle, onClose }: VehicleModalProps) {
           {/* Right: Details */}
           <div className="w-full md:w-1/2 p-6 md:p-10 overflow-y-auto custom-scrollbar">
             <div className="mb-8">
-              <div className="flex items-center gap-2 text-[#B22234] font-bold text-sm uppercase tracking-widest mb-2">
+              <div className="flex items-center gap-2 text-[#475C7A] font-bold text-sm uppercase tracking-widest mb-2">
                 <Car className="w-4 h-4" />
                 <span>{vehicle.year} {vehicle.make}</span>
               </div>
@@ -65,7 +65,7 @@ export default function VehicleModal({ vehicle, onClose }: VehicleModalProps) {
                 {vehicle.model} <span className="text-gray-400 font-light">{vehicle.trim}</span>
               </h2>
               <div className="flex items-baseline gap-3">
-                <span className="text-4xl font-black text-[#B22234]">
+                <span className="text-4xl font-black text-[#475C7A]">
                   ₦{vehicle.price.toLocaleString()}
                 </span>
                 <span className="text-gray-400 text-sm font-medium">
@@ -85,7 +85,7 @@ export default function VehicleModal({ vehicle, onClose }: VehicleModalProps) {
             {/* Detailed Specs */}
             <div className="space-y-6 mb-10">
               <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2 border-b pb-2">
-                <Info className="w-5 h-5 text-[#B22234]" />
+                <Info className="w-5 h-5 text-[#475C7A]" />
                 Vehicle Specifications
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-sm">
@@ -101,7 +101,7 @@ export default function VehicleModal({ vehicle, onClose }: VehicleModalProps) {
             {/* Features */}
             <div className="mb-10">
               <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2 border-b pb-2 mb-4">
-                <CheckCircle2 className="w-5 h-5 text-[#B22234]" />
+                <CheckCircle2 className="w-5 h-5 text-[#475C7A]" />
                 Key Features
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -115,7 +115,7 @@ export default function VehicleModal({ vehicle, onClose }: VehicleModalProps) {
 
             {/* Actions */}
             <div className="grid grid-cols-1 gap-4">
-              <button className="bg-[#B22234] text-white font-bold py-4 rounded-2xl hover:bg-[#C41E3A] transition-all shadow-lg shadow-red-100 flex items-center justify-center gap-2">
+              <button className="bg-[#475C7A] text-white font-bold py-4 rounded-2xl hover:bg-[#5C7495] transition-all shadow-lg shadow-red-100 flex items-center justify-center gap-2">
                 <Calendar className="w-5 h-5" />
                 Schedule Test Drive
               </button>

@@ -31,7 +31,7 @@ export default function VehicleCard({ vehicle, onViewDetails }: VehicleCardProps
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-2">
           {vehicle.isJustArrived && (
-            <span className="bg-[#B22234] text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider shadow-lg">
+            <span className="bg-[#475C7A] text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider shadow-lg">
               Just Arrived
             </span>
           )}
@@ -41,7 +41,7 @@ export default function VehicleCard({ vehicle, onViewDetails }: VehicleCardProps
             </span>
           )}
           {vehicle.isBestValue && (
-            <span className="bg-[#D4AF37] text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider shadow-lg">
+            <span className="bg-[#D0D6E0] text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider shadow-lg">
               Best Value
             </span>
           )}
@@ -57,7 +57,7 @@ export default function VehicleCard({ vehicle, onViewDetails }: VehicleCardProps
       {/* Content Section */}
       <div className="p-5 flex flex-col flex-grow">
         <div className="mb-4">
-          <h3 className="text-gray-900 font-bold text-lg leading-tight group-hover:text-[#B22234] transition-colors">
+          <h3 className="text-gray-900 font-bold text-lg leading-tight group-hover:text-[#475C7A] transition-colors">
             {vehicle.year} {vehicle.make} {vehicle.model}
           </h3>
           <p className="text-gray-500 text-sm font-medium">{vehicle.trim}</p>

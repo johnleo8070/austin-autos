@@ -32,8 +32,8 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-[#B22234] font-black uppercase tracking-widest text-sm mb-3">Get In Touch</h2>
-          <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">Contact <span className="text-[#B22234]">Us</span></h1>
+          <h2 className="text-[#475C7A] font-black uppercase tracking-widest text-sm mb-3">Get In Touch</h2>
+          <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">Contact <span className="text-[#475C7A]">Us</span></h1>
           <p className="text-gray-500 font-medium text-lg">Austin Autos LTD is here to help you find your perfect vehicle in Nigeria.</p>
         </div>
 
@@ -45,10 +45,10 @@ export default function Contact() {
             className="lg:col-span-2 bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-gray-100"
           >
             <h3 className="text-2xl font-black text-gray-900 mb-8 flex items-center gap-3">
-              <Mail className="w-6 h-6 text-[#B22234]" />
+              <Mail className="w-6 h-6 text-[#475C7A]" />
               Send Us a Message
             </h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -58,7 +58,7 @@ export default function Contact() {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#B22234] transition-all font-medium"
+                    className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#475C7A] transition-all font-medium"
                     placeholder="John Doe"
                   />
                 </div>
@@ -69,7 +69,7 @@ export default function Contact() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#B22234] transition-all font-medium"
+                    className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#475C7A] transition-all font-medium"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -83,7 +83,7 @@ export default function Contact() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#B22234] transition-all font-medium"
+                    className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#475C7A] transition-all font-medium"
                     placeholder="+234 802 975 8041"
                   />
                 </div>
@@ -92,7 +92,7 @@ export default function Contact() {
                   <select
                     value={formData.contactMethod}
                     onChange={(e) => setFormData({ ...formData, contactMethod: e.target.value })}
-                    className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#B22234] transition-all font-medium appearance-none"
+                    className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#475C7A] transition-all font-medium appearance-none"
                   >
                     <option>Email</option>
                     <option>Phone</option>
@@ -106,7 +106,7 @@ export default function Contact() {
                   type="text"
                   value={formData.vehicle}
                   onChange={(e) => setFormData({ ...formData, vehicle: e.target.value })}
-                  className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#B22234] transition-all font-medium"
+                  className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#475C7A] transition-all font-medium"
                   placeholder="e.g. 2023 Toyota Camry"
                 />
               </div>
@@ -117,18 +117,18 @@ export default function Contact() {
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#B22234] transition-all font-medium resize-none"
+                  className="w-full px-5 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#475C7A] transition-all font-medium resize-none"
                   placeholder="How can we help you?"
                 />
               </div>
 
-              <div className="flex items-center gap-3 p-4 bg-red-50 rounded-2xl border border-red-100">
+              <div className="flex items-center gap-3 p-4 bg-[#475C7A]/10 rounded-2xl border border-red-100">
                 <input
                   type="checkbox"
                   id="testDrive"
                   checked={formData.testDrive}
                   onChange={(e) => setFormData({ ...formData, testDrive: e.target.checked })}
-                  className="w-5 h-5 rounded border-gray-300 text-[#B22234] focus:ring-[#B22234]"
+                  className="w-5 h-5 rounded border-gray-300 text-[#475C7A] focus:ring-[#475C7A]"
                 />
                 <label htmlFor="testDrive" className="text-sm font-bold text-gray-700 cursor-pointer">
                   I'm interested in scheduling a test drive
@@ -137,7 +137,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-[#B22234] text-white font-black py-5 rounded-2xl hover:bg-[#C41E3A] transition-all shadow-xl shadow-red-100 flex items-center justify-center gap-2 text-lg"
+                className="w-full bg-[#475C7A] text-white font-black py-5 rounded-2xl hover:bg-[#5C7495] transition-all shadow-xl shadow-red-100 flex items-center justify-center gap-2 text-lg"
               >
                 Send Message
                 <Send className="w-5 h-5" />
@@ -158,7 +158,7 @@ export default function Contact() {
                 <ContactDetail icon={Phone} label="Phone" value="+234 802 975 8041" />
                 <ContactDetail icon={Mail} label="Email" value="sales@austinautos.com" />
               </div>
-              
+
               <div className="mt-10 pt-10 border-t border-gray-100">
                 <h4 className="text-sm font-black uppercase tracking-widest text-gray-400 mb-6">Follow Us</h4>
                 <div className="flex gap-4">
@@ -170,7 +170,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-[#1A1A1A] p-10 rounded-[2.5rem] text-white shadow-xl">
+            <div className="bg-[#1C252E] p-10 rounded-[2.5rem] text-white shadow-xl">
               <h4 className="text-xl font-black mb-6">Business Hours</h4>
               <div className="space-y-4 text-sm font-medium">
                 <div className="flex justify-between border-b border-gray-800 pb-2">
@@ -183,7 +183,7 @@ export default function Contact() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-400">Sunday</span>
-                  <span className="text-[#B22234] font-bold">Closed</span>
+                  <span className="text-[#475C7A] font-bold">Closed</span>
                 </div>
               </div>
             </div>
@@ -215,7 +215,7 @@ function BenefitItem({ icon: Icon, text }: { icon: any, text: string }) {
   return (
     <div className="flex items-center gap-4">
       <div className="bg-white/10 p-2 rounded-lg">
-        <Icon className="w-5 h-5 text-[#D4AF37]" />
+        <Icon className="w-5 h-5 text-[#D0D6E0]" />
       </div>
       <span className="font-bold text-sm text-gray-200">{text}</span>
     </div>
@@ -225,8 +225,8 @@ function BenefitItem({ icon: Icon, text }: { icon: any, text: string }) {
 function ContactDetail({ icon: Icon, label, value }: { icon: any, label: string, value: string }) {
   return (
     <div className="flex items-start gap-4">
-      <div className="bg-red-50 p-3 rounded-xl">
-        <Icon className="w-5 h-5 text-[#B22234]" />
+      <div className="bg-[#475C7A]/10 p-3 rounded-xl">
+        <Icon className="w-5 h-5 text-[#475C7A]" />
       </div>
       <div>
         <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">{label}</p>
@@ -238,7 +238,7 @@ function ContactDetail({ icon: Icon, label, value }: { icon: any, label: string,
 
 function SocialIcon({ icon: Icon }: { icon: any }) {
   return (
-    <a href="#" className="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center text-gray-400 hover:bg-[#B22234] hover:text-white transition-all transform hover:scale-110">
+    <a href="#" className="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center text-gray-400 hover:bg-[#475C7A] hover:text-white transition-all transform hover:scale-110">
       <Icon className="w-6 h-6" />
     </a>
   );

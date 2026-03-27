@@ -23,9 +23,9 @@ export default function Inventory({ onViewDetails }: InventoryProps) {
     // Search
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
-      result = result.filter(v => 
-        v.make.toLowerCase().includes(query) || 
-        v.model.toLowerCase().includes(query) || 
+      result = result.filter(v =>
+        v.make.toLowerCase().includes(query) ||
+        v.model.toLowerCase().includes(query) ||
         v.year.toString().includes(query)
       );
     }
@@ -67,7 +67,7 @@ export default function Inventory({ onViewDetails }: InventoryProps) {
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-4">
-            Our <span className="text-[#B22234]">Inventory</span>
+            Our <span className="text-[#475C7A]">Inventory</span>
           </h1>
           <p className="text-gray-500 font-medium text-lg">
             Showing {filteredVehicles.length} vehicles matching your criteria
@@ -107,7 +107,7 @@ export default function Inventory({ onViewDetails }: InventoryProps) {
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
-                
+
                 <div className="flex gap-2">
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                     <button
@@ -116,7 +116,7 @@ export default function Inventory({ onViewDetails }: InventoryProps) {
                       className={cn(
                         "w-12 h-12 rounded-2xl font-bold text-sm transition-all",
                         currentPage === page
-                          ? "bg-[#B22234] text-white shadow-lg shadow-red-100"
+                          ? "bg-[#475C7A] text-white shadow-lg shadow-red-100"
                           : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50"
                       )}
                     >
@@ -148,7 +148,7 @@ export default function Inventory({ onViewDetails }: InventoryProps) {
                 setFilters({});
                 setSort('newest');
               }}
-              className="mt-6 text-[#B22234] font-bold hover:underline"
+              className="mt-6 text-[#475C7A] font-bold hover:underline"
             >
               Clear all filters
             </button>

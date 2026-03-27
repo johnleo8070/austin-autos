@@ -6,7 +6,7 @@
 }
 
 body {
-  @apply font-sans text-[#1A1A1A] bg-white antialiased;
+  @apply font-sans text-[#1C252E] bg-white antialiased;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -19,10 +19,10 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #B22234;
+  background: #475C7A;
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #C41E3A;
+  background: #5C7495;
 }
